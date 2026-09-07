@@ -1,0 +1,483 @@
+/* =========================
+   TOP PROFILE BUTTON
+========================= */
+
+.feed-top-bar {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+
+.my-profile-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 10px 15px;
+
+  border: 1px solid #dfe3ea;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #33373d;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.my-profile-button:hover {
+  background: #f3f4f6;
+
+  border-color: #cfd4dc;
+
+  transform: translateY(-1px);
+}
+
+
+.my-profile-button:active {
+  transform: translateY(0);
+}
+
+
+.my-profile-button:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+}
+
+
+.profile-arrow {
+  display: inline-block;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  transition:
+    transform 0.2s ease;
+}
+
+
+.my-profile-button:hover
+.profile-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .feed-top-bar {
+    margin-bottom: 12px;
+  }
+
+
+  .my-profile-button {
+    padding: 9px 12px;
+
+    font-size: 12px;
+  }
+
+
+  .profile-arrow {
+    font-size: 16px;
+  }
+
+}
+
+.feed-page {
+  min-height: 100vh;
+  padding: 40px 20px 60px;
+  background: #f5f7fb;
+}
+
+.feed-container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   FEED HEADER
+========================================= */
+
+.feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.feed-header h1 {
+  margin: 0 0 6px;
+
+  color: #17191c;
+
+  font-size: 28px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.feed-header p {
+  margin: 0;
+
+  color: #737982;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.feed-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+  padding: 13px 15px;
+
+  border: 1px solid #f1caca;
+  border-radius: 11px;
+
+  background: #fff5f5;
+  color: #c62828;
+
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.feed-error span:first-child {
+  font-size: 17px;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.feed-loading {
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  color: #737982;
+}
+
+.feed-loading p {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+
+  border: 3px solid #e5e7eb;
+  border-top-color: #6366f1;
+
+  border-radius: 50%;
+
+  animation: feedSpin 0.8s linear infinite;
+}
+
+@keyframes feedSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   EMPTY FEED
+========================================= */
+
+.empty-feed {
+  padding: 60px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e8ed;
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow:
+    0 4px 18px rgba(20, 30, 50, 0.04);
+}
+
+.empty-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #f3f4f6;
+
+  font-size: 26px;
+}
+
+.empty-feed h3 {
+  margin: 0 0 7px;
+
+  color: #25282d;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.empty-feed p {
+  margin: 0;
+
+  color: #777d86;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   POSTS LIST
+========================================= */
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+/* =========================================
+   LOAD MORE
+========================================= */
+
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 25px;
+}
+
+.load-more-button {
+  min-width: 130px;
+
+  padding: 11px 20px;
+
+  border: 1px solid #dfe3ea;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #33373d;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.load-more-button:hover:not(:disabled) {
+  background: #f3f4f6;
+  border-color: #cfd4dc;
+
+  transform: translateY(-1px);
+}
+
+.load-more-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.load-more-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   POSTCARD BASIC COMPATIBILITY
+   PostCard ke common classes ke liye
+========================================= */
+
+.post-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e8ed;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 18px rgba(20, 30, 50, 0.04);
+}
+
+.post-card-header {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 17px 18px;
+}
+
+.post-card-content {
+  padding: 0 18px 17px;
+}
+
+.post-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border-top: 1px solid #eceef2;
+}
+
+.post-card-image {
+  display: block;
+
+  width: 100%;
+  max-height: 600px;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .feed-page {
+    padding: 28px 15px 45px;
+  }
+
+  .feed-header h1 {
+    font-size: 24px;
+  }
+
+  .feed-header p {
+    font-size: 13px;
+  }
+
+  .posts-list {
+    gap: 14px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .feed-page {
+    padding: 20px 10px 35px;
+  }
+
+  .feed-header {
+    margin-bottom: 18px;
+  }
+
+  .feed-header h1 {
+    font-size: 22px;
+  }
+
+  .feed-header p {
+    font-size: 12px;
+  }
+
+  .feed-error {
+    padding: 11px 12px;
+
+    font-size: 12px;
+  }
+
+  .empty-feed {
+    padding: 45px 18px;
+
+    border-radius: 15px;
+  }
+
+  .empty-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 23px;
+  }
+
+  .empty-feed h3 {
+    font-size: 17px;
+  }
+
+  .empty-feed p {
+    font-size: 12px;
+  }
+
+  .posts-list {
+    gap: 12px;
+  }
+
+  .load-more-wrapper {
+    margin-top: 20px;
+  }
+
+  .load-more-button {
+    width: 100%;
+  }
+
+  .post-card-header {
+    padding: 14px;
+  }
+
+  .post-card-content {
+    padding: 0 14px 14px;
+  }
+
+  .post-card-actions {
+    padding: 10px 14px;
+  }
+}
