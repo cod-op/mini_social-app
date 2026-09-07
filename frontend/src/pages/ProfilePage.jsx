@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import AvatarName from "../components/profile.jsx";
 import { api } from "../lib/api.js";
 
-import "./profilepage.css";
+import "./ProfilePage.css";
 
 export default function ProfilePage() {
   const { user, logout } = useAuth();
