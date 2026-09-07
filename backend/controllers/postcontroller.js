@@ -1,4 +1,4 @@
-import Post from "../models/Post.js";
+import Post from "../models/post.js";
 import {uploadOnCloudinary } from "../config/cloudinary.js";
 
 // CREATE POST
